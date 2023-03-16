@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainMenu">
+   <children>
+      <Label layoutX="401.0" layoutY="45.0" text="Inventory Management System">
+         <font>
+            <Font name="System Bold Italic" size="36.0" />
+         </font>
+      </Label>
+      <VBox layoutX="10.0" layoutY="181.0" prefHeight="379.0" prefWidth="652.0">
+         <children>
+            <Label text="Parts">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <TableView fx:id="partsTable" prefHeight="173.0" prefWidth="619.0">
+              <columns>
+                <TableColumn fx:id="partIdCol" prefWidth="150.0" text="Part ID" />
+                <TableColumn fx:id="partNameCol" prefWidth="150.0" text="Part Name" />
+                  <TableColumn fx:id="invLabCol" prefWidth="150.0" text="Inventory Label" />
+                  <TableColumn fx:id="priceCol" prefWidth="150.0" text="Price / Cost Per Unit" />
+              </columns>
+            </TableView>
+            <Button mnemonicParsing="false" onAction="#addPartMenu" text="Add">
+               <VBox.margin>
+                  <Insets bottom="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#modifyPartMenu" text="Modify">
+               <VBox.margin>
+                  <Insets bottom="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#deletePart" text="Delete">
+               <VBox.margin>
+                  <Insets bottom="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+      <VBox layoutX="684.0" layoutY="178.0" prefHeight="350.0" prefWidth="635.0">
+         <children>
+            <Label text="Products">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <TableView fx:id="productsTable" prefHeight="230.0" prefWidth="602.0">
+              <columns>
+                <TableColumn fx:id="productIdCol" prefWidth="150.0" text="Product ID" />
+                <TableColumn fx:id="productNameCol" prefWidth="150.0" text="Product Name" />
+                  <TableColumn fx:id="productInvCol" prefWidth="150.0" text="Inventory Level" />
+                  <TableColumn fx:id="productPriceCol" prefWidth="150.0" text="Price / Cost Per Unit" />
+              </columns>
+            </TableView>
+            <Button mnemonicParsing="false" onAction="#addProductMenu" text="Add">
+               <VBox.margin>
+                  <Insets bottom="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#modifyProductMenu" text="Modify">
+               <VBox.margin>
+                  <Insets bottom="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#deleteProduct" text="Delete">
+               <VBox.margin>
+                  <Insets bottom="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+      <Button layoutX="1267.0" layoutY="547.0" mnemonicParsing="false" onAction="#exitBtn" text="Exit" />
+      <TextField fx:id="searchPartsField" layoutX="10.0" layoutY="147.0" onKeyReleased="#searchParts" promptText="Search Parts" />
+      <TextField fx:id="searchProductsLabel" layoutX="684.0" layoutY="147.0" onKeyReleased="#searchProducts" promptText="Search Products" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddPart">
+   <children>
+      <Label layoutX="28.0" layoutY="32.0" text="Add Part">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="inHouse" layoutX="14.0" layoutY="72.0" mnemonicParsing="false" onAction="#onInHouseChecked" selected="true" text="In-House">
+         <toggleGroup>
+            <ToggleGroup fx:id="InOut" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="outSourced" layoutX="103.0" layoutY="72.0" mnemonicParsing="false" onAction="#onOutsourceChecked" text="Outsourced" toggleGroup="$InOut" />
+      <TextField fx:id="addPartId" disable="true" layoutX="14.0" layoutY="99.0" promptText="ID (Auto - Generated)" />
+      <TextField fx:id="addPartName" layoutX="89.0" layoutY="139.0" promptText="Name" />
+      <TextField fx:id="addPartInv" layoutX="89.0" layoutY="175.0" promptText="Inv" />
+      <TextField fx:id="addPartPrice" layoutX="89.0" layoutY="215.0" promptText="Price / Cost" />
+      <TextField fx:id="addPartMax" layoutX="89.0" layoutY="263.0" promptText="Max" />
+      <TextField fx:id="addPartMin" layoutX="314.0" layoutY="263.0" promptText="Min" />
+      <TextField fx:id="machineCompany" layoutX="89.0" layoutY="303.0" promptText="Machine ID" />
+      <Button fx:id="addPartSave" layoutX="14.0" layoutY="352.0" mnemonicParsing="false" onAction="#onAddPartSave" text="Save" />
+      <Button layoutX="89.0" layoutY="352.0" mnemonicParsing="false" onAction="#cancelAddPart" text="Cancel" />
+      <Label layoutX="18.0" layoutY="143.0" text="Name" />
+      <Label layoutX="20.0" layoutY="179.0" text="Inventory" />
+      <Label layoutX="20.0" layoutY="219.0" text="Price" />
+      <Label layoutX="20.0" layoutY="267.0" text="Max" />
+      <Label layoutX="279.0" layoutY="267.0" text="Min" />
+      <Label fx:id="machCompLabel" layoutX="20.0" layoutY="307.0" text="Machine ID" />
+      <Label fx:id="errorMessageLabel" layoutX="289.0" layoutY="63.0" />
+   </children>
+</AnchorPane>
